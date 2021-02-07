@@ -7,7 +7,7 @@ const cors = require('cors')
 require("dotenv").config();
 
 const corsOptions = {
-    origin: '*',
+    origin: process.env.APP_URL,
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 router.use(cors(corsOptions));

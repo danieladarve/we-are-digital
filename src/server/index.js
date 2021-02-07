@@ -14,8 +14,7 @@ const apiRouter = require("./routes");
  * App Variables
  */
 const app = express();
-const env = process.env.NODE_ENV;
-const port = env==="production"?5000:8000;
+const port = process.env.PORT;
 const sessionSecret = process.env.SESSION_SECRET || "acbdefghi";
 // This could be a Model, but for simplicity it is set to a .env constant
 const bearerToken = process.env.MIX_BEARER_TOKEN || "1234";
