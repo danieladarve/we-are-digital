@@ -9,7 +9,7 @@
     "ui": "browser-sync start --config bs-config.js",
     "watch": "concurrently \"npx mix watch\" \"npm:dev\" \"npm:ui\"",
     "production": "npx mix --production",
-    "start": "nodemon ./src/server/index.js"
+    "start": "node ./src/server/index.js"
   },
   "license": "ISC",
   "devDependencies": {
