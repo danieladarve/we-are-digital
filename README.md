@@ -40,6 +40,7 @@ and
 
  1. The "post" endpoint, saves the data into a json file.
  2. The initial dataset was hardcoded, there is no CSV parsing due to time constrains. If you would like to see a very similar project i did for another technical test, which crunches 50000 lines in a CSV using Laravel and a VueJS frontend, see this repo `https://github.com/danieladarve/snooze` and https://snooze.appsnwebsites.com/ ... the CSVs for this project are also found in the repo.
+ 3. In this case I used a Bearer Token and restricted the API routes using the request origin header
 
 ## Deployment Notes
 Project was deployed to Heroku
