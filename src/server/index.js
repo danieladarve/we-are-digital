@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const path = require("path");
 
 const expressSession = require("express-session");
@@ -45,8 +46,6 @@ const strategy = new BearerStrategy(
  *  App Configuration & Middlewares
  */
 app.use(express.static(path.join(__dirname, '/../../public')));
-// console.log('yo ',path.join(__dirname, '/../../public'))
-// app.use('/public', express.static(path.join(__dirname, '/../../public')));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
@@ -60,6 +59,19 @@ passport.use(strategy);
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Restrict API
+app.use(function(req, res, next) {
+  if (req.path.includes("/api/")) {
+    if(req.get('host') === process.env.APP_URL){
+      next();
+    }else{
+      res.status(400).send({error: 'Not Authorized'});
+      return;
+    }
+  }else{
+    next();
+  }
+});
 
 // Mount Router
 app.use("/", apiRouter);

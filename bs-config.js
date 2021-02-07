@@ -1,5 +1,5 @@
 module.exports = {
-    proxy: "localhost:8000",
+    proxy: "localhost:3000",
     files: [
         "public/assets/*.css", 
         "public/assets/*.js"
@@ -8,5 +8,5 @@ module.exports = {
     reloadDelay: 10,
     ui: false,
     notify: false,
-    port: 3000,
+    port: 3001,
 };
