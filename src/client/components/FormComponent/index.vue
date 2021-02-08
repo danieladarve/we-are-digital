@@ -2,7 +2,9 @@
   <fragment>
     <div>
       <div class="flex flex-wrap overflow-hidden md:-mx-3">
-        <div class="mt-5 w-full overflow-hidden md:my-3 md:px-3 md:w-4/12">
+        <div
+          class="mt-5 w-full overflow-hidden md:my-3 md:px-3 md:w-6/12 lg:w-4/12"
+        >
           <div class="shadow overflow-hidden rounded-md">
             <div class="px-4 py-5 bg-white sm:pt-5 sm:pb-3">
               <div class="block">
